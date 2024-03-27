@@ -31,19 +31,22 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/token/:token_id', function(req, res) {
   const tokenId = parseInt(req.params.token_id).toString()
-  const [tileX, tileY] = blockXY(tokenId)
-
-  const data = {
-    'name': 'Tile #' + tokenId,
-    'attributes': {
-      'X Coordinate': tileX,
-      'Y Coordinate': tileY,
-    },
-    'description': 'Ownership of tile #' + tokenId + ' at https://themillionetherhomepage.com. Owner can put ads within the area they own.',
-    'external_url': "https://themillionetherhomepage.com/tokenid/" + tokenId,
-    'image': `${HOST}/images/${tokenId}.png`
+  if (tokenId > 0 && tokenId <= 10000) {
+    const [tileX, tileY] = blockXY(tokenId)
+    const data = {
+      'name': 'Tile #' + tokenId,
+      'attributes': {
+        'X Coordinate': tileX,
+        'Y Coordinate': tileY,
+      },
+      'description': 'Ownership of tile #' + tokenId + ' at https://themillionetherhomepage.com. Owner can put ads within the area they own.',
+      'external_url': "https://themillionetherhomepage.com/tokenid/" + tokenId,
+      'image': `${HOST}/images/${tokenId}.png`
+    }
+    res.send(data)
+  } else {
+    res.send({ 'error': 'Token ID our of range' })
   }
-  res.send(data)
 })
 
 app.listen(app.get('port'), function() {
