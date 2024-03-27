@@ -2,12 +2,14 @@
 
 Available at:
 ```
-https://api.themillionetherhomepage.com
+https://api.themillionetherhomepage.com:8443/
 ```
+
+**Warning!!!** Cloudflare cache is configured for a year for this API.
 
 Example query:
 ```
-https://api.themillionetherhomepage.com/token/101
+https://api.themillionetherhomepage.com:8443/token/15
 ```
 
 Response:
