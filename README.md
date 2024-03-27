@@ -23,3 +23,9 @@ Response:
   "image": "https://api.themillionetherhomepage.com/images/101.png"
 }
 ```
+
+Nginx setup (wrong CF cert)
+https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-16-04
+
+Cloudflare cert is here:
+https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/set-up/zone-level/
