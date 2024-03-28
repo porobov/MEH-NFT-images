@@ -1,17 +1,15 @@
 # Metadata server for themillionetherhomepage.com
 
-Available at:
+## Available at:
 ```
 https://api.themillionetherhomepage.com:8443/
 ```
-
 **Warning!!!** Cloudflare cache is configured for a year for this API.
 
-Example query:
+## Example query:
 ```
 https://api.themillionetherhomepage.com:8443/token/15
 ```
-
 Response:
 ```
 {
@@ -26,8 +24,7 @@ Response:
 }
 ```
 
-Nginx setup (wrong CF cert)
-https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-16-04
-
-Cloudflare cert is here:
-https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/set-up/zone-level/
+## Useful links:
+- [Nginx setup (wrong CF cert)](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-16-04)
+- [Cloudflare origin certificate](https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/set-up/zone-level/)
+- [Configure pm2](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
