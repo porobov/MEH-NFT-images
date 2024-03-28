@@ -1,14 +1,18 @@
 # Metadata server for themillionetherhomepage.com
 
-## Available at:
+### Available at:
 ```
-https://api.themillionetherhomepage.com:8443/
+https://api.themillionetherhomepage.com/
 ```
-**Warning!!!** Cloudflare cache is configured for a year for this API.
+### Cache notes
+Cache is configured through Nginx. See [config](nginx-config.txt).
+Cloudflare rules appleied:
+- Cache rules. TTL is 1 year for api.themillionetherhomepage.com (not sure if works 🤷).
+- Page Rules. "Cache everything" for api.themillionetherhomepage.com (not sure if needed🤷).
 
-## Example query:
+### Example query:
 ```
-https://api.themillionetherhomepage.com:8443/token/15
+https://api.themillionetherhomepage.com/token/15
 ```
 Response:
 ```
@@ -23,7 +27,6 @@ Response:
   "image": "https://api.themillionetherhomepage.com/images/101.png"
 }
 ```
-
 ## Useful links:
 - [Nginx setup (wrong CF cert)](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-16-04)
 - [Cloudflare origin certificate](https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/set-up/zone-level/)

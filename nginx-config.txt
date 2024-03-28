@@ -1,8 +1,8 @@
 # sudo cat /etc/nginx/sites-available/api.themillionetherhomepage.com
 
 server {
-	listen 8443 ssl http2;
-	listen [::]:8443 ssl http2;
+	listen 443 ssl http2;
+	listen [::]:443 ssl http2;
 	ssl_certificate         /etc/ssl/certs/cert.pem;
 	ssl_certificate_key     /etc/ssl/private/key.pem;
 	ssl_client_certificate /etc/ssl/certs/cloudflare.crt;
@@ -19,7 +19,6 @@ server {
 		add_header Cache-Control "public, max-age=604800, stale-if-error=604800";
 	}
 }
-
 
 server {
 	listen 80;
