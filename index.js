@@ -39,7 +39,7 @@ app.get('/token/:token_id', function(req, res) {
         'X Coordinate': tileX,
         'Y Coordinate': tileY,
       },
-      'description': 'Ownership of tile #' + tokenId + ' at https://themillionetherhomepage.com. Owner can put ads within the area they own.',
+      'description': 'This NFT confirms ownership of tile #' + tokenId + ' at https://themillionetherhomepage.com. Owner can put ads within the area they own.',
       'external_url': "https://themillionetherhomepage.com/tokenid/" + tokenId,
       'image': `${HOST}/images/${tokenId}.png`
     }
