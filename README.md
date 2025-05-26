@@ -1,5 +1,8 @@
 # Metadata server for themillionetherhomepage.com
 
+## Metadata server for themillionetherhomepage.com
+Now serving through GitHub Pages - https://github.com/porobov/MEH-NFT-thumbs
+
 ### Available at:
 ```
 https://api.themillionetherhomepage.com/
